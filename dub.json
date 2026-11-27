@@ -1,0 +1,9 @@
+{
+  "name": "client-web-algos",
+  "description": "Zero-dependency reference algorithms for client-side browser media tools (GIF89a, Web Audio FFT) and web puzzle engines (word ladders, Nonogram, logarithmic scale projection).",
+  "authors": ["Rocky Yang"],
+  "copyright": "Copyright © 2026 Rocky Yang",
+  "license": "MIT",
+  "homepage": "https://offlinegifeditor.com/",
+  "targetType": "library"
+}
