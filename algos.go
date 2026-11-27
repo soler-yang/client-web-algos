@@ -1,5 +1,13 @@
 // Package webalgos implements lightweight, zero-dependency reference algorithms
-// used across client-side browser media utilities and puzzle games.
+// used across seven client-side browser media utilities and web puzzle engines:
+//
+//   - Offline GIF Editor (GIF89a frame disposal & chroma cutout): https://offlinegifeditor.com/
+//   - Audio Visualizer Online (Web Audio FFT & WebCodecs export): https://audiovisualizeronline.com/
+//   - Get Word Ladder (bidirectional BFS word-ladder solver): https://getwordladder.com/
+//   - Play Size Comparison (logarithmic 1:1 visual scale projection): https://playsizecomparison.com/
+//   - Guess The Animal Game (Linnaean taxonomic deduction): https://guesstheanimalgame.com/
+//   - PuzzleFern (deterministic Nonogram, Hashi & logic solvers): https://puzzlefern.com/
+//   - MakeMeRap (BPM beat-grid & lip-sync cue alignment): https://makemerap.com/
 package webalgos
 
 import (
