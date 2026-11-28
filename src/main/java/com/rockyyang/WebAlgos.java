@@ -13,6 +13,7 @@ package com.rockyyang;
  *   <li><a href="https://guesstheanimalgame.com/">Guess The Animal Game</a> &mdash; 365-species Linnaean taxonomic deduction and wildlife sound game</li>
  *   <li><a href="https://puzzlefern.com/">PuzzleFern</a> &mdash; 24 classic browser logic and number puzzles including Nonogram, Hashi, and Lights Out</li>
  *   <li><a href="https://makemerap.com/">MakeMeRap</a> &mdash; BPM beat-grid alignment and AI rap music video studio</li>
+ *   <li><a href="https://playcolorbynumber.com/">Play Color by Number</a> &mdash; 100% browser-local dual-engine Pixel &amp; Smooth Vector color-by-number studio, OKLab photo converter, and printable PDF generator</li>
  * </ul>
  *
  * @author Rocky Yang
@@ -105,5 +106,18 @@ public final class WebAlgos {
      */
     public static int gifDelayTicksToMs(int delayTicks) {
         return delayTicks <= 1 ? 100 : delayTicks * 10;
+    }
+
+    /**
+     * Computes relative sRGB luminance (0..1) for contrast-safe numeral labels inside regions.
+     * Used by <a href="https://playcolorbynumber.com/">Play Color by Number</a>.
+     *
+     * @param r red 0..255
+     * @param g green 0..255
+     * @param b blue 0..255
+     * @return relative luminance in [0, 1]
+     */
+    public static double srgbLuminance(int r, int g, int b) {
+        return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255.0;
     }
 }
