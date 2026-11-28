@@ -11,6 +11,7 @@
  *   $(LI $(LINK2 https://guesstheanimalgame.com/, Guess The Animal Game) — 365-species Linnaean taxonomic deduction and wildlife sound game)
  *   $(LI $(LINK2 https://puzzlefern.com/, PuzzleFern) — 24 deterministic browser logic puzzles including Nonogram, Hashi, and Lights Out)
  *   $(LI $(LINK2 https://makemerap.com/, MakeMeRap) — BPM beat-grid alignment and AI rap music video generator)
+ *   $(LI $(LINK2 https://playcolorbynumber.com/, Play Color by Number) — zero-upload dual-engine Pixel & Smooth Vector color-by-number studio, OKLab photo converter, and printable PDF generator)
  * )
  *
  * Authors: Rocky Yang
@@ -75,4 +76,11 @@ int sharedTaxonDepth(const string[] a, const string[] b) pure nothrow @safe
 int gifDelayTicksToMs(int delayTicks) pure nothrow @safe
 {
     return delayTicks <= 1 ? 100 : delayTicks * 10;
+}
+
+/// Computes relative sRGB luminance (0..1) for contrast-safe region numeral placement.
+/// Used by $(LINK2 https://playcolorbynumber.com/, Play Color by Number).
+double srgbLuminance(ubyte r, ubyte g, ubyte b) pure nothrow @safe
+{
+    return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255.0;
 }
