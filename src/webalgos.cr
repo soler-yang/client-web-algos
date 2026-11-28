@@ -10,8 +10,9 @@
 # - [Guess The Animal Game](https://guesstheanimalgame.com/) — 365-species Linnaean taxonomic deduction and wildlife sound game
 # - [PuzzleFern](https://puzzlefern.com/) — 24 classic browser logic and number puzzles including Nonogram, Hashi, and Lights Out
 # - [MakeMeRap](https://makemerap.com/) — BPM beat-grid alignment and AI rap music video generator
+# - [Play Color by Number](https://playcolorbynumber.com/) — 100% browser-local dual-engine Pixel & Smooth Vector color-by-number studio, OKLab photo converter, and printable PDF generator
 module WebAlgos
-  VERSION = "0.1.4"
+  VERSION = "0.1.6"
 
   # Returns milliseconds per quarter-note beat for a given BPM tempo.
   # Used by [MakeMeRap](https://makemerap.com/) and [Audio Visualizer Online](https://audiovisualizeronline.com/).
@@ -55,5 +56,11 @@ module WebAlgos
   # Used by [Offline GIF Editor](https://offlinegifeditor.com/).
   def self.gif_delay_ticks_to_ms(delay_ticks : Int32) : Int32
     delay_ticks <= 1 ? 100 : delay_ticks * 10
+  end
+
+  # Computes relative sRGB luminance (0..1) for numeral contrast inside color-by-number regions.
+  # Used by [Play Color by Number](https://playcolorbynumber.com/).
+  def self.srgb_luminance(r : UInt8, g : UInt8, b : UInt8) : Float64
+    (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255.0
   end
 end
