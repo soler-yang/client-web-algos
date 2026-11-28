@@ -22,3 +22,5 @@ Below is a concise technical overview of seven live web applications covering lo
 1. **Keep core bundles lean**: Externalizing large read-only datasets (species catalogs, 3D object metadata, dictionary word lists) keeps initial JavaScript execution fast on mobile devices.
 2. **Use native browser primitives first**: `WebCodecs`, `Web Audio`, `Canvas 2D`, and deterministic constraint solvers eliminate backend compute costs while keeping user media private on-device.
 3. **Design for zero-friction play**: Keyboard shortcuts, instant offline resets, and clean mobile layouts improve retention far more than heavy UI chrome.
+
+- **[Play Color by Number](https://playcolorbynumber.com/)** — 100% browser-local dual-engine (Pixel Grid + Smooth Shared-Arc Vector) color-by-number studio, OKLab photo converter, K–5 math worksheets, and pure-JS vector PDF 1.4 exporter.
