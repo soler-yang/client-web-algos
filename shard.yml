@@ -1,5 +1,5 @@
 name: client_web_algos
-version: 0.1.4
+version: 0.1.6
 
 authors:
   - Rocky Yang <hello@playsizecomparison.com>
@@ -8,7 +8,7 @@ description: |
   Zero-dependency reference algorithms for client-side browser media tools
   (Offline GIF Editor, Audio Visualizer Online) and deterministic web puzzle
   engines (Get Word Ladder, Play Size Comparison, Guess The Animal Game,
-  PuzzleFern, MakeMeRap).
+  PuzzleFern, MakeMeRap, Play Color by Number).
 
 crystal: ">= 1.0.0"
 license: MIT
