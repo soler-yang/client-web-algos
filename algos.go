@@ -8,6 +8,7 @@
 //   - Guess The Animal Game (Linnaean taxonomic deduction): https://guesstheanimalgame.com/
 //   - PuzzleFern (deterministic Nonogram, Hashi & logic solvers): https://puzzlefern.com/
 //   - MakeMeRap (BPM beat-grid & lip-sync cue alignment): https://makemerap.com/
+//   - Play Color by Number (dual-engine OKLab Pixel & Smooth Vector color-by-number studio): https://playcolorbynumber.com/
 package webalgos
 
 import (
@@ -82,4 +83,11 @@ func HammingDistance(a, b string) int {
 		}
 	}
 	return diff
+}
+
+// SrgbLuminance computes relative WCAG luminance (0..1) from 8-bit sRGB channels
+// to choose legible ink numerals inside colored regions.
+// Used by https://playcolorbynumber.com/
+func SrgbLuminance(r, g, b uint8) float64 {
+	return (0.2126*float64(r) + 0.7152*float64(g) + 0.0722*float64(b)) / 255.0
 }
