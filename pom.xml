@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.soler-yang</groupId>
   <artifactId>client-web-algos</artifactId>
-  <version>0.1.5</version>
+  <version>0.1.6</version>
   <packaging>jar</packaging>
   <name>client-web-algos</name>
   <description>Zero-dependency reference algorithms for client-side browser media tools and deterministic web puzzle engines.</description>
